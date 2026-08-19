@@ -26,7 +26,6 @@ namespace Ucu.Poo.Restaurant
             this.Number = number;
             this.IsOccupied = false;
         }
-
         public void Occupy()
         {
             this.IsOccupied = true;
