@@ -45,7 +45,7 @@ namespace Ucu.Poo.Restaurant
         {
             this.Name = name;
             this.Price = price;
-            this.isVegetarian = IsVegetarian;
+            this.IsVegetarian = isVegetarian;
         }
     }
 }
