@@ -14,19 +14,19 @@ namespace Ucu.Poo.Restaurant
         private string name;
         public string Name
         {
-            get {return name}
+            get {return name;}
             set {name = value;}
         }
         private float price;
         public float Price
         {
-            get {return price}
+            get {return price;}
             set {price = value;}
         }
         private bool isVegetarian;
         public bool IsVegetarian
         {
-            get {return isVegetarian}
+            get {return isVegetarian;}
             set {isVegetarian = value;}
         }
     }
