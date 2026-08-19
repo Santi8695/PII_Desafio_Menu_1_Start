@@ -14,7 +14,27 @@ namespace Ucu.Poo.Restaurant
     public class Table
     {
         private ArrayList order = new ArrayList();
-
+        public int Number { get}
+        public bool IsOccupied { get; private set; }
+        public arrayList Order { get { return this.order; } } 
+        public Table(int number)
+        {
+            this.Number = number;
+            this.IsOccupied = false;
+        }
+        public void Occupy()
+        {
+            this.IsOccupied = true;
+        }
+        public void free()
+        {
+            this.IsOccupied = false;
+            this.order.Clear();
+        }
+        public void AddOrder(Dish dish)
+        {
+            this.order.Add(dish);
+        }
         public bool HasOrders()
         {
             return this.order.Count > 0;
