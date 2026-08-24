@@ -5,6 +5,7 @@
 //------------------------------------------------------------------------------
 
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Ucu.Poo.Restaurant
 {
@@ -20,7 +21,15 @@ namespace Ucu.Poo.Restaurant
         {
             get { return this.order; }
         }
-
+        public double GetTotal()
+        {
+            double total = 0;
+            foreach (Dish dish in order)
+            {
+                total += dish.Price;
+            }
+            return total;
+        }
         public Table(int number)
         {
             this.Number = number;
