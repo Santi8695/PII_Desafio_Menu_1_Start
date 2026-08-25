@@ -11,25 +11,12 @@ namespace Ucu.Poo.Restaurant
 {
     public class Table
     {
-        private ArrayList order = new ArrayList();
+        private OrderCliente order;
 
         public int Number { get; }
 
         public bool IsOccupied { get; private set; }
 
-        public ArrayList Order
-        {
-            get { return this.order; }
-        }
-        public double GetTotal()
-        {
-            double total = 0;
-            foreach (Dish dish in order)
-            {
-                total += dish.Price;
-            }
-            return total;
-        }
         public Table(int number)
         {
             this.Number = number;
@@ -43,17 +30,6 @@ namespace Ucu.Poo.Restaurant
         public void Free()
         {
             this.IsOccupied = false;
-            this.order.Clear();
-        }
-
-        public void AddToOrder(Dish dish)
-        {
-            this.order.Add(dish);
-        }
-
-        public bool HasOrders()
-        {
-            return this.order.Count > 0;
         }
     }
 }

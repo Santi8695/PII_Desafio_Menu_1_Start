@@ -36,9 +36,9 @@ namespace Ucu.Poo.Restaurant
         /// <summary>
         /// Metodo para tomar orden
         /// </summary>
-        public void TakeOrder(Table mesa, Dish plato)
+        public void TakeOrder(OrderCliente orden, Dish plato)
         {
-            mesa.AddToOrder(plato);
+            orden.AddToOrder(plato);
         }
 
         /// <summary>
